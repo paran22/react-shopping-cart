@@ -1,4 +1,4 @@
 export * from './axios';
 export * from './mocks';
-export * from './types';
+export * from './models';
 export * from './hooks';
