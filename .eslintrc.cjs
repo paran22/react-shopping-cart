@@ -9,7 +9,13 @@ module.exports = {
 	],
 	ignorePatterns: ['build', 'dist', 'public'],
 	parser: '@typescript-eslint/parser',
-	plugins: ['prettier', 'react', 'react-hooks', '@typescript-eslint'],
+	plugins: [
+		'prettier',
+		'react',
+		'react-hooks',
+		'@typescript-eslint',
+		'@tanstack/eslint-plugin-query',
+	],
 	rules: {
 		'prettier/prettier': ['error'],
 		'react/react-in-jsx-scope': 'off',
