@@ -1,5 +1,5 @@
 import { HttpResponse, http } from 'msw';
-import mockDb from '../../db.json';
+import mockDb from '../../../db.json';
 
 export const handlers = [
 	http.get('/products', () => {
