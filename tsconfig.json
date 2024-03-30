@@ -22,9 +22,10 @@
 		"baseUrl": "./src",
 		"paths": {
 			"@api": ["./api/index.ts"],
-			"@components": ["./components/index.ts"]
+			"@components": ["./components/index.ts"],
+			"@assets": ["./assets/index.ts"]
 		}
 	},
-	"include": ["src"],
+	"include": ["src", "svg.d.ts"],
 	"references": [{ "path": "./tsconfig.node.json" }]
 }
