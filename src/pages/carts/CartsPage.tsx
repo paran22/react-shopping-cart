@@ -1,5 +1,5 @@
 import { useGetCarts } from '@api';
-import { PageTitle } from '@components';
+import { PageTitle } from '@components/layout';
 import CartAllSelector from './components/CartsAllSelector';
 
 export default function CartsPage() {

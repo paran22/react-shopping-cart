@@ -8,7 +8,8 @@ export default defineConfig({
 	resolve: {
 		alias: [
 			{ find: '@api', replacement: '/src/api' },
-			{ find: '@components', replacement: '/src/components' },
+			{ find: '@components/layout', replacement: '/src/components/layout' },
+			{ find: '@components/ui', replacement: '/src/components/ui' },
 			{ find: '@assets', replacement: '/src/assets' },
 		],
 	},

@@ -1,5 +1,5 @@
-import { CheckBox } from '@components';
 import { useState } from 'react';
+import { CheckBox, Button } from '@components/ui';
 
 export default function CartAllSelector() {
 	const [selectedAll, setSelectedAll] = useState(false);
@@ -10,6 +10,7 @@ export default function CartAllSelector() {
 	return (
 		<div className="flex justify-between items-center">
 			<CheckBox checked={selectedAll} onChange={handleCheck} label={label} />
+			<Button variant="border">{label}</Button>
 		</div>
 	);
 }
