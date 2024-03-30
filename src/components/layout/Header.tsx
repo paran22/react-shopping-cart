@@ -1,5 +1,5 @@
+import { Cart } from '@assets';
 import { useNavigate } from 'react-router-dom';
-import cart from '/public/svgs/cart.svg';
 
 export default function Header() {
 	const navigate = useNavigate();
@@ -18,7 +18,7 @@ export default function Header() {
 				<div className="flex-center">
 					<button onClick={handleLogoClick}>
 						<h1 className="nav-title">
-							<img src={cart} width={'40px'} />
+							<Cart width="40px" />
 							NEXTSTEP
 						</h1>
 					</button>
