@@ -1,11 +1,17 @@
-import { useState } from 'react';
-import { CheckBox, Button } from '@components/ui';
+import { Button, CheckBox } from '@components/ui';
 
-export default function CartAllSelector() {
-	const [selectedAll, setSelectedAll] = useState(false);
+interface CartsAllSelectorProps {
+	selectedAll: boolean;
+	selectAll: () => void;
+}
+
+export default function CartAllSelector({
+	selectedAll,
+	selectAll,
+}: CartsAllSelectorProps) {
 	const label = selectedAll ? '선택해제' : '전체선택';
 	const handleCheck = () => {
-		setSelectedAll(!selectedAll);
+		selectAll();
 	};
 	return (
 		<div className="flex justify-between items-center">

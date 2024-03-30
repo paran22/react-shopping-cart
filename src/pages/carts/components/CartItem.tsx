@@ -1,19 +1,17 @@
-import { CartModel } from '@api';
 import { Trash } from '@assets';
 import { Button, CheckBox } from '@components/ui';
 import QuantitySelector from './QuantitySelector';
 import { useState } from 'react';
+import { Cart } from '@types';
 
 interface CartItemProps {
-	data: CartModel;
-	selected: boolean;
+	data: Cart;
 	onSelect: (id: number) => void;
 	onDelete: (id: number) => void;
 }
 
 export default function CartItem({
 	data: cart,
-	selected,
 	onSelect,
 	onDelete,
 }: CartItemProps) {
@@ -36,7 +34,7 @@ export default function CartItem({
 	return (
 		<div className="cart-container">
 			<div className="flex gap-15 mt-10">
-				<CheckBox checked={selected} onChange={handleSelect} />
+				<CheckBox checked={cart.selected} onChange={handleSelect} />
 				<img className="w-144 h-144" src={imageUrl} alt={name} />
 				<span className="cart-name">{name}</span>
 			</div>

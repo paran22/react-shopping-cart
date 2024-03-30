@@ -1,23 +1,17 @@
-import { useState } from 'react';
-import CartsHeader from './CartsHeader';
-import { CartModel } from '@api';
+import { Cart } from '@types';
 import CartItem from './CartItem';
+import CartsHeader from './CartsHeader';
 
 interface CartProps {
-	data: CartModel[];
+	data: Cart[];
+	onSelect: (id: number) => void;
 }
 
-export default function Carts({ data: carts }: CartProps) {
-	const [selectedItemIds, setSelectedItemIds] = useState<number[]>([]);
-	const selectedItemQuantity = selectedItemIds.length;
+export default function Carts({ data: carts, onSelect }: CartProps) {
+	const selectedItemQuantity = carts.filter((cart) => cart.selected).length;
 
 	const handleSelect = (id: number) => {
-		setSelectedItemIds((prev) => {
-			if (prev.includes(id)) {
-				return prev.filter((itemId) => itemId !== id);
-			}
-			return [...prev, id];
-		});
+		onSelect(id);
 	};
 
 	const handleDelete = (id: number) => {};
@@ -30,7 +24,6 @@ export default function Carts({ data: carts }: CartProps) {
 					<CartItem
 						key={cart.id}
 						data={cart}
-						selected={selectedItemIds.includes(cart.id)}
 						onSelect={handleSelect}
 						onDelete={handleDelete}
 					/>

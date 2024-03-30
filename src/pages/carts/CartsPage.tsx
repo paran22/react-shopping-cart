@@ -1,18 +1,47 @@
 import { useGetCarts } from '@api';
 import { PageTitle } from '@components/layout';
-import CartAllSelector from './components/CartsAllSelector';
 import Carts from './components/Carts';
+import CartAllSelector from './components/CartsAllSelector';
+import { useEffect, useState } from 'react';
+import { Cart } from '@types';
 
 export default function CartsPage() {
-	const { data: carts } = useGetCarts();
+	const { data } = useGetCarts();
+	const [carts, setCarts] = useState<Cart[]>([]);
+
+	useEffect(() => {
+		const initialCarts = (data ?? []).map((cart) => ({
+			...cart,
+			selected: true,
+		}));
+		setCarts(initialCarts);
+	}, [data]);
+
+	const selectedAll = carts.every((cart) => cart.selected);
+	const selectAll = () => {
+		setCarts(
+			carts.map((cart) => ({
+				...cart,
+				selected: selectedAll ? false : true,
+			})),
+		);
+	};
+	const handleSelect = (id: number) => {
+		setCarts(
+			carts.map((cart) =>
+				cart.id === id ? { ...cart, selected: !cart.selected } : cart,
+			),
+		);
+	};
+
 	return (
 		<section className="cart-section">
 			<PageTitle title="장바구니" />
 			{carts && (
 				<div className="flex">
 					<section className="cart-left-section">
-						<CartAllSelector />
-						<Carts data={carts} />
+						<CartAllSelector selectedAll={selectedAll} selectAll={selectAll} />
+						<Carts data={carts} onSelect={handleSelect} />
 					</section>
 				</div>
 			)}
