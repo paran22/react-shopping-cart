@@ -37,6 +37,7 @@ const RAW_RUNTIME_STATE =
           ["@typescript-eslint/parser", "virtual:01940a95b60f8a6b8676fddbb971e4db15c357c7c184292797baf3fe9a116ecdea998341915887b3137ca427b3996bd3611f1b718320be0d1939fd5edce586a5#npm:7.3.1"],\
           ["@vitejs/plugin-react", "virtual:01940a95b60f8a6b8676fddbb971e4db15c357c7c184292797baf3fe9a116ecdea998341915887b3137ca427b3996bd3611f1b718320be0d1939fd5edce586a5#npm:4.2.1"],\
           ["axios", "npm:1.6.8"],\
+          ["clsx", "npm:2.1.0"],\
           ["eslint", "npm:8.57.0"],\
           ["eslint-config-prettier", "virtual:01940a95b60f8a6b8676fddbb971e4db15c357c7c184292797baf3fe9a116ecdea998341915887b3137ca427b3996bd3611f1b718320be0d1939fd5edce586a5#npm:9.1.0"],\
           ["eslint-plugin-prettier", "virtual:01940a95b60f8a6b8676fddbb971e4db15c357c7c184292797baf3fe9a116ecdea998341915887b3137ca427b3996bd3611f1b718320be0d1939fd5edce586a5#npm:5.1.3"],\
@@ -4788,6 +4789,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["clsx", [\
+      ["npm:2.1.0", {\
+        "packageLocation": "../.yarn/berry/cache/clsx-npm-2.1.0-29d286e1de-10c0.zip/node_modules/clsx/",\
+        "packageDependencies": [\
+          ["clsx", "npm:2.1.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["color-convert", [\
       ["npm:1.9.3", {\
         "packageLocation": "../.yarn/berry/cache/color-convert-npm-1.9.3-1fe690075e-10c0.zip/node_modules/color-convert/",\
@@ -7682,6 +7692,7 @@ const RAW_RUNTIME_STATE =
           ["@typescript-eslint/parser", "virtual:01940a95b60f8a6b8676fddbb971e4db15c357c7c184292797baf3fe9a116ecdea998341915887b3137ca427b3996bd3611f1b718320be0d1939fd5edce586a5#npm:7.3.1"],\
           ["@vitejs/plugin-react", "virtual:01940a95b60f8a6b8676fddbb971e4db15c357c7c184292797baf3fe9a116ecdea998341915887b3137ca427b3996bd3611f1b718320be0d1939fd5edce586a5#npm:4.2.1"],\
           ["axios", "npm:1.6.8"],\
+          ["clsx", "npm:2.1.0"],\
           ["eslint", "npm:8.57.0"],\
           ["eslint-config-prettier", "virtual:01940a95b60f8a6b8676fddbb971e4db15c357c7c184292797baf3fe9a116ecdea998341915887b3137ca427b3996bd3611f1b718320be0d1939fd5edce586a5#npm:9.1.0"],\
           ["eslint-plugin-prettier", "virtual:01940a95b60f8a6b8676fddbb971e4db15c357c7c184292797baf3fe9a116ecdea998341915887b3137ca427b3996bd3611f1b718320be0d1939fd5edce586a5#npm:5.1.3"],\
