@@ -1,5 +1,7 @@
-import React from 'react';
+import { useGetProducts } from '@api';
+import Products from './components/Products';
 
 export default function ProductsPage() {
-	return <div>ProductPage</div>;
+	const { data: products } = useGetProducts();
+	return <>{products && <Products data={products} />}</>;
 }
