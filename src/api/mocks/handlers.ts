@@ -2,26 +2,26 @@ import { HttpResponse, http } from 'msw';
 import mockDb from '../../../db.json';
 
 export const handlers = [
-	http.get('/products', () => {
-		return HttpResponse.json({
-			data: mockDb.products,
-		});
-	}),
-	http.get('/carts', () => {
-		return HttpResponse.json({
-			data: mockDb.carts,
-		});
-	}),
-	http.delete('/carts/:cartId', (req) => {
-		const cartId = req.params.cartId;
-		console.log('cartId', cartId);
-		return HttpResponse.json({
-			data: mockDb.carts.filter((cart) => cart.id !== Number(cartId)),
-		});
-	}),
-	http.get('/orders', () => {
-		return HttpResponse.json({
-			data: mockDb.orders,
-		});
-	}),
+  http.get('/products', () => {
+    return HttpResponse.json({
+      data: mockDb.products,
+    });
+  }),
+  http.get('/carts', () => {
+    return HttpResponse.json({
+      data: mockDb.carts,
+    });
+  }),
+  http.delete('/carts/:cartId', (req) => {
+    const cartId = req.params.cartId;
+    console.log('cartId', cartId);
+    return HttpResponse.json({
+      data: mockDb.carts.filter((cart) => cart.id !== Number(cartId)),
+    });
+  }),
+  http.get('/orders', () => {
+    return HttpResponse.json({
+      data: mockDb.orders,
+    });
+  }),
 ];

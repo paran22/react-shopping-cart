@@ -2,6 +2,6 @@ import { useGetProducts } from '@api';
 import Products from './components/Products';
 
 export default function ProductsPage() {
-	const { data: products } = useGetProducts();
-	return <>{products && <Products data={products} />}</>;
+  const { data: products } = useGetProducts();
+  return <>{products && <Products data={products} />}</>;
 }
