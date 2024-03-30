@@ -12,6 +12,13 @@ export const handlers = [
 			data: mockDb.carts,
 		});
 	}),
+	http.delete('/carts/:cartId', (req) => {
+		const cartId = req.params.cartId;
+		console.log('cartId', cartId);
+		return HttpResponse.json({
+			data: mockDb.carts.filter((cart) => cart.id !== Number(cartId)),
+		});
+	}),
 	http.get('/orders', () => {
 		return HttpResponse.json({
 			data: mockDb.orders,
