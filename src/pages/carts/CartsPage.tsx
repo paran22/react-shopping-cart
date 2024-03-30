@@ -8,13 +8,24 @@ import { Cart } from '@types';
 export default function CartsPage() {
 	const { data } = useGetCarts();
 	const [carts, setCarts] = useState<Cart[]>([]);
-
 	useEffect(() => {
-		const initialCarts = (data ?? []).map((cart) => ({
-			...cart,
-			selected: true,
-		}));
-		setCarts(initialCarts);
+		if (!data) return;
+		if (carts.length === 0) {
+			const initialCarts = (data ?? []).map((cart) => ({
+				...cart,
+				selected: true,
+			}));
+			setCarts(initialCarts);
+			return;
+		}
+		setCarts((prev) =>
+			data.map((cart) => ({
+				...cart,
+				selected: prev.find((prevCart) => prevCart.id === cart.id)
+					? prev.find((prevCart) => prevCart.id === cart.id)?.selected ?? true
+					: false,
+			})),
+		);
 	}, [data]);
 
 	const selectedAll = carts.every((cart) => cart.selected);
