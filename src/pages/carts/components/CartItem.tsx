@@ -31,6 +31,9 @@ export default function CartItem({
 	const handleMinus = () => {
 		setQuantity(quantity - 1);
 	};
+	const handleQuantityChange = (value: number) => {
+		setQuantity(value);
+	};
 	return (
 		<div className="cart-container">
 			<div className="flex gap-15 mt-10">
@@ -46,6 +49,7 @@ export default function CartItem({
 					value={quantity}
 					onPlus={handlePlus}
 					onMinus={handleMinus}
+					onChange={handleQuantityChange}
 				/>
 				<span className="cart-price">{`${displayedPrice}원`}</span>
 			</div>
