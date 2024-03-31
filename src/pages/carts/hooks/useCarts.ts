@@ -8,7 +8,7 @@ export default function useCarts() {
     [carts],
   );
   const selectAll = useCallback(() => {
-    setCarts(ㅊ
+    setCarts(
       carts.map((cart) => ({
         ...cart,
         selected: !selectedAll,
