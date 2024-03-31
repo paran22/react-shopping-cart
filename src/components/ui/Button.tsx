@@ -1,10 +1,10 @@
 import clsx from 'clsx';
 import React from 'react';
 
-const toVariantClassName = (
-  variant?: `primary` | 'border',
-  size?: 'small' | 'medium' | 'large',
-) => {
+type ButtonVariant = 'primary' | 'border' | 'nav';
+type ButtonSize = 'small' | 'medium' | 'large';
+
+const toVariantClassName = (variant?: ButtonVariant, size?: ButtonSize) => {
   let className = '';
   if (variant) {
     className += `${variant}-button`;
@@ -17,9 +17,9 @@ const toVariantClassName = (
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
-  variant?: 'primary' | 'border';
+  variant?: ButtonVariant;
   className?: string;
-  size?: 'small' | 'medium' | 'large';
+  size?: ButtonSize;
 }
 
 export default function Button({
