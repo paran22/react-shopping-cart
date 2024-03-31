@@ -1,7 +1,7 @@
 import { Cart } from '@types';
 import { useMemo } from 'react';
 
-export default function useCartSummary(carts: Cart[]) {
+export default function useCartsSummary(carts: Cart[]) {
   const totalPrice = useMemo(
     () =>
       carts.reduce((acc, cur) => {
