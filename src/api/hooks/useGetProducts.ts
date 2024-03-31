@@ -8,5 +8,7 @@ export default function useGetProducts() {
     queryKey: [PRODUCTS_QUERY_KEY],
     queryFn: getProducts,
     select: (response) => response.data,
+    refetchOnMount: false,
+    staleTime: 1000 * 60 * 4,
   });
 }
