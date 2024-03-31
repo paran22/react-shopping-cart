@@ -5,6 +5,8 @@ interface QuantitySelectorProps {
   onPlus: () => void;
   onMinus: () => void;
   onChange: (value: number) => void;
+  min?: number;
+  max?: number;
 }
 
 export default function QuantitySelector({
@@ -12,12 +14,15 @@ export default function QuantitySelector({
   onPlus,
   onMinus,
   onChange,
+  min,
+  max,
 }: QuantitySelectorProps) {
   const handleMinus = () => {
-    if (value === 0) return;
+    if (value === min) return;
     onMinus();
   };
   const handlePlus = () => {
+    if (value === max) return;
     onPlus();
   };
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -31,6 +36,7 @@ export default function QuantitySelector({
         className="number-input"
         value={value}
         onChange={handleChange}
+        disabled
       />
       <div>
         <Button className="number-input-button" onClick={handlePlus}>

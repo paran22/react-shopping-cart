@@ -50,6 +50,8 @@ export default function CartItem({
           onPlus={handlePlus}
           onMinus={handleMinus}
           onChange={handleQuantityChange}
+          min={1}
+          max={20}
         />
         <span className="cart-price">{`${displayedPrice}원`}</span>
       </div>
