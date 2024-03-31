@@ -6,9 +6,14 @@ import { useDeleteCart } from '@api';
 interface CartProps {
   data: Cart[];
   onSelect: (id: number) => void;
+  onQuantityChange: (id: number, quantity: number) => void;
 }
 
-export default function Carts({ data: carts, onSelect }: CartProps) {
+export default function Carts({
+  data: carts,
+  onSelect,
+  onQuantityChange,
+}: CartProps) {
   const selectedItemQuantity = carts.filter((cart) => cart.selected).length;
   const { mutate: deleteCart } = useDeleteCart();
 
@@ -18,6 +23,10 @@ export default function Carts({ data: carts, onSelect }: CartProps) {
 
   const handleDelete = (id: number) => {
     deleteCart(id);
+  };
+
+  const handleQuantityChange = (id: number, quantity: number) => {
+    onQuantityChange(id, quantity);
   };
 
   return (
@@ -30,6 +39,7 @@ export default function Carts({ data: carts, onSelect }: CartProps) {
             data={cart}
             onSelect={handleSelect}
             onDelete={handleDelete}
+            onQuantityChange={handleQuantityChange}
           />
         ))}
     </>

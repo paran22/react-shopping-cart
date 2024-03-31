@@ -1,19 +1,20 @@
 import { Trash } from '@assets';
 import { Button, CheckBox } from '@components/ui';
-import QuantitySelector from './QuantitySelector';
-import { useState } from 'react';
 import { Cart } from '@types';
+import QuantitySelector from './QuantitySelector';
 
 interface CartItemProps {
   data: Cart;
   onSelect: (id: number) => void;
   onDelete: (id: number) => void;
+  onQuantityChange: (id: number, quantity: number) => void;
 }
 
 export default function CartItem({
   data: cart,
   onSelect,
   onDelete,
+  onQuantityChange,
 }: CartItemProps) {
   const handleSelect = () => {
     onSelect(cart.id);
@@ -23,16 +24,15 @@ export default function CartItem({
   };
   const { imageUrl, name } = cart.product;
 
-  const [quantity, setQuantity] = useState(cart.quantity);
-  const displayedPrice = (quantity * cart.product.price).toLocaleString();
+  const displayedPrice = (cart.quantity * cart.product.price).toLocaleString();
   const handlePlus = () => {
-    setQuantity(quantity + 1);
+    onQuantityChange(cart.id, cart.quantity + 1);
   };
   const handleMinus = () => {
-    setQuantity(quantity - 1);
+    onQuantityChange(cart.id, cart.quantity - 1);
   };
   const handleQuantityChange = (value: number) => {
-    setQuantity(value);
+    onQuantityChange(cart.id, value);
   };
   return (
     <div className="cart-container">
@@ -46,7 +46,7 @@ export default function CartItem({
           <Trash width={20} />
         </Button>
         <QuantitySelector
-          value={quantity}
+          value={cart.quantity}
           onPlus={handlePlus}
           onMinus={handleMinus}
           onChange={handleQuantityChange}
