@@ -3,6 +3,7 @@ import App from './App';
 import ProductsPage from './pages/products/ProductsPage';
 import CartsPage from './pages/carts/CartsPage';
 import OrdersPage from './pages/orders/OrdersPage';
+import OrderDetailPage from './pages/orderDetail/OrderDetailPage';
 
 export const router = createBrowserRouter([
   {
@@ -20,6 +21,12 @@ export const router = createBrowserRouter([
       {
         path: 'orders',
         element: <OrdersPage />,
+        children: [
+          {
+            path: ':id',
+            element: <OrderDetailPage />,
+          },
+        ],
       },
     ],
   },
