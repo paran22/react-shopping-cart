@@ -8,7 +8,7 @@ export default function useCarts() {
     [carts],
   );
   const selectAll = useCallback(() => {
-    setCarts(
+    setCarts(ㅊ
       carts.map((cart) => ({
         ...cart,
         selected: !selectedAll,
@@ -25,26 +25,6 @@ export default function useCarts() {
     },
     [carts, setCarts],
   );
-  const totalPrice = useMemo(
-    () =>
-      carts.reduce((acc, cur) => {
-        if (cur.selected) {
-          acc += cur.product.price * cur.quantity;
-        }
-        return acc;
-      }, 0),
-    [carts],
-  );
-  const totalCount = useMemo(
-    () =>
-      carts.reduce((acc, cur) => {
-        if (cur.selected) {
-          acc += cur.quantity;
-        }
-        return acc;
-      }, 0),
-    [carts],
-  );
   const handleQuantityChange = useCallback(
     (id: number, quantity: number) => {
       setCarts(
@@ -58,8 +38,6 @@ export default function useCarts() {
     selectedAll,
     selectAll,
     handleSelect,
-    totalPrice,
-    totalCount,
     handleQuantityChange,
   };
 }
