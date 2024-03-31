@@ -16,7 +16,9 @@ export default function CartAllSelector({
   return (
     <div className="flex justify-between items-center">
       <CheckBox checked={selectedAll} onChange={handleCheck} label={label} />
-      <Button variant="border">{label}</Button>
+      <Button variant="border" onClick={handleCheck}>
+        {label}
+      </Button>
     </div>
   );
 }
