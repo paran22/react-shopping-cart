@@ -1,4 +1,4 @@
-export interface OrderDetailModel {
+export interface OrderProductModel {
   id: number;
   name: string;
   price: number;
@@ -8,5 +8,5 @@ export interface OrderDetailModel {
 
 export interface OrderModel {
   id: number;
-  orderDetails: OrderDetailModel[];
+  orderDetails: OrderProductModel[];
 }
