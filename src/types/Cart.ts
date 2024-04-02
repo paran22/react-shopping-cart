@@ -1,4 +1,4 @@
-import { CartModel } from '@api';
+import type { CartModel } from '@api';
 
 export default interface Cart extends CartModel {
   selected: boolean;

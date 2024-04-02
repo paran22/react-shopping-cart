@@ -23,7 +23,9 @@ const queryClient = new QueryClient({
 });
 
 enableMocking().then(() => {
-  ReactDOM.createRoot(document.getElementById('root')!).render(
+  const root = document.getElementById('root');
+  if (!root) return;
+  ReactDOM.createRoot(root).render(
     <React.StrictMode>
       <QueryClientProvider client={queryClient}>
         <RouterProvider router={router} />
