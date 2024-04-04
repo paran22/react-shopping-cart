@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { getOrders } from '../axios/orderApi';
+import { getOrders } from '../api/axios/orderApi';
 
 const ORDERS_QUERY_KEY = 'orders';
 
