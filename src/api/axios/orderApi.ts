@@ -1,5 +1,5 @@
-import type { ApiResponse } from 'api/models/ApiResponse';
-import type { OrderResponse } from 'api/models/OrderResponse';
+import type { ApiResponse } from 'api/types/ApiResponse';
+import type { OrderResponse } from 'api/types/OrderResponse';
 import { instance } from './axios';
 
 export const getOrders = async (): Promise<ApiResponse<OrderResponse[]>> => {

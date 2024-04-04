@@ -1,5 +1,5 @@
-import type { ProductResponse } from 'api/models';
-import type { ApiResponse } from 'api/models/ApiResponse';
+import type { ProductResponse } from 'api/types';
+import type { ApiResponse } from 'api/types/ApiResponse';
 import { instance } from './axios';
 
 export const getProducts = async (): Promise<

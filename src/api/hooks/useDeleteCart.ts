@@ -1,8 +1,8 @@
 import { QueryKey, useMutation, useQueryClient } from '@tanstack/react-query';
 import { CARTS_QUERY_KEY } from './useGetCarts';
 import { deleteCart } from '../axios';
-import type { CartResponse } from 'api/models';
-import type { ApiResponse } from 'api/models/ApiResponse';
+import type { CartResponse } from 'api/types';
+import type { ApiResponse } from 'api/types/ApiResponse';
 
 export default function useDeleteCart() {
   const queryClient = useQueryClient();
