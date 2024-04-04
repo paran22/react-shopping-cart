@@ -1,6 +1,6 @@
-import { useGetOrders } from '@api';
 import { PageTitle } from '@components/layout';
 import OrderItem from './components/OrderItem';
+import { useGetOrders } from '@hooks';
 
 export default function OrdersPage() {
   const { data: orders } = useGetOrders();

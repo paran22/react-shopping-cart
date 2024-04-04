@@ -1,6 +1,5 @@
-import { type CartResponse, deleteCart } from '@api';
+import { type CartResponse, deleteCart, type ApiResponse } from '@api';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import type { ApiResponse } from 'api/types/ApiResponse';
 import { CARTS_QUERY_KEY } from './useGetCarts';
 
 export default function useDeleteCart() {

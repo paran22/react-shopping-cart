@@ -1,7 +1,7 @@
-import { Cart } from '@types';
+import type { Cart } from '@types';
 import CartItem from './CartItem';
 import CartsHeader from './CartsHeader';
-import { useDeleteCart } from '@api';
+import { useDeleteCart } from '@hooks';
 
 interface CartProps {
   data: Cart[];

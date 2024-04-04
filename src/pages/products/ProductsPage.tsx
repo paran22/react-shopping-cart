@@ -1,4 +1,4 @@
-import { useGetProducts } from '@api';
+import { useGetProducts } from '@hooks';
 import Products from './components/Products';
 
 export default function ProductsPage() {

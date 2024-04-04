@@ -12,6 +12,7 @@ export default defineConfig({
       { find: '@components/ui', replacement: '/src/components/ui' },
       { find: '@assets', replacement: '/src/assets' },
       { find: '@types', replacement: '/src/types' },
+      { find: '@hooks', replacement: '/src/hooks' },
     ],
   },
 });
