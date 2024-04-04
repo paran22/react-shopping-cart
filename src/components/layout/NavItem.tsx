@@ -1,5 +1,5 @@
 import { Button } from '@components/ui';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 interface NavItemProps {
   to: string;
@@ -7,9 +7,13 @@ interface NavItemProps {
 }
 
 export default function NavItem({ to, label }: NavItemProps) {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(to);
+  };
   return (
-    <Link to={to}>
-      <Button variant="nav">{label}</Button>
-    </Link>
+    <Button variant="nav" onClick={handleClick}>
+      {label}
+    </Button>
   );
 }
