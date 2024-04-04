@@ -1,5 +1,5 @@
-import { useGetCarts } from '@api';
-import { Cart } from '@types';
+import { useGetCarts } from '@hooks';
+import type { Cart } from '@types';
 import { useEffect, useState } from 'react';
 
 export default function useCartsState(): [
@@ -26,6 +26,6 @@ export default function useCartsState(): [
           : false,
       })),
     );
-  }, [data]);
+  }, [data, carts.length]);
   return [carts, setCarts];
 }

@@ -1,11 +1,11 @@
 interface CartsSummaryProps {
   totalPrice: number;
-  totalCount: number;
+  totalQuantity: number;
 }
 
 export default function CartsSummary({
   totalPrice,
-  totalCount,
+  totalQuantity,
 }: CartsSummaryProps) {
   const displayedPrice = totalPrice.toLocaleString();
   return (
@@ -20,8 +20,8 @@ export default function CartsSummary({
           <span className="highlight-text">{`${displayedPrice}원`}</span>
         </div>
         <div className="flex-center mt-30 mx-10">
-          <button className="primary-button flex-center">
-            주문하기({totalCount}개)
+          <button type="button" className="primary-button flex-center">
+            주문하기({totalQuantity}개)
           </button>
         </div>
       </div>

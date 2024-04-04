@@ -3,12 +3,16 @@ import Carts from './components/Carts';
 import CartAllSelector from './components/CartsAllSelector';
 import CartsSummary from './components/CartsSummary';
 import useCarts from './hooks/useCarts';
-import useCartsSummary from './hooks/useCartsSummary';
+import {
+  calculateTotalPrice,
+  calculateTotalQuantity,
+} from './utils/cartsUtils';
 
 export default function CartsPage() {
   const { carts, selectedAll, selectAll, handleSelect, handleQuantityChange } =
     useCarts();
-  const { totalPrice, totalCount } = useCartsSummary(carts);
+  const totalPrice = calculateTotalPrice(carts);
+  const totalQuantity = calculateTotalQuantity(carts);
 
   return (
     <section className="cart-section">
@@ -24,7 +28,10 @@ export default function CartsPage() {
             />
           </section>
           <section className="cart-right-section">
-            <CartsSummary totalPrice={totalPrice} totalCount={totalCount} />
+            <CartsSummary
+              totalPrice={totalPrice}
+              totalQuantity={totalQuantity}
+            />
           </section>
         </div>
       )}
