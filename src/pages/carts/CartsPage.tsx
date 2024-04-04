@@ -20,7 +20,10 @@ export default function CartsPage() {
       {carts && (
         <div className="flex">
           <section className="cart-left-section">
-            <CartAllSelector selectedAll={selectedAll} selectAll={selectAll} />
+            <CartAllSelector
+              isSelectedAll={selectedAll}
+              selectAll={selectAll}
+            />
             <Carts
               data={carts}
               onSelect={handleSelect}
