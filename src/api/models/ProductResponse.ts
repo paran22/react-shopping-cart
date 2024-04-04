@@ -1,4 +1,4 @@
-export interface ProductModel {
+export interface ProductResponse {
   id: number;
   name: string;
   price: number;

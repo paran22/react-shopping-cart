@@ -1,3 +1,3 @@
-export * from './CartModel';
-export * from './OrderModel';
-export * from './ProductModel';
+export * from './CartResponse';
+export * from './OrderResponse';
+export * from './ProductResponse';

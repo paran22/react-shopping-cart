@@ -1,8 +1,8 @@
 import type { ApiResponse } from 'api/models/ApiResponse';
 import { instance } from './axios';
-import type { CartModel } from 'api/models';
+import type { CartResponse } from 'api/models';
 
-export const getCarts = async (): Promise<ApiResponse<CartModel[]>> => {
+export const getCarts = async (): Promise<ApiResponse<CartResponse[]>> => {
   const response = await instance.get('/carts');
   return response.data;
 };

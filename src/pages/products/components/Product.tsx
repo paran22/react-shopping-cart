@@ -1,8 +1,8 @@
-import { ProductModel } from '@api';
+import type { ProductResponse } from '@api';
 import { Cart } from '@assets';
 
 interface ProductProps {
-  data: ProductModel;
+  data: ProductResponse;
 }
 
 export default function Product({

@@ -1,8 +1,8 @@
-import { ProductModel } from '@api';
+import type { ProductResponse } from '@api';
 import Product from './Product';
 
 interface ProductsProps {
-  data: ProductModel[];
+  data: ProductResponse[];
 }
 
 export default function Products({ data: products }: ProductsProps) {

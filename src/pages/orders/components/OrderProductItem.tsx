@@ -1,8 +1,8 @@
-import { OrderProductModel } from '@api';
+import type { OrderProductResponse } from '@api';
 import { Button } from '@components/ui';
 
 interface OrderProductItemProps {
-  data: OrderProductModel;
+  data: OrderProductResponse;
 }
 
 export default function OrderProductItem({

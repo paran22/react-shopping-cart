@@ -1,10 +1,10 @@
-import { OrderModel } from '@api';
+import type { OrderResponse } from '@api';
 import { Link } from 'react-router-dom';
 import OrderProductItem from './OrderProductItem';
 import { Button } from '@components/ui';
 
 interface OrderItemProps {
-  data: OrderModel;
+  data: OrderResponse;
 }
 
 export default function OrderItem({ data: order }: OrderItemProps) {

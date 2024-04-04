@@ -1,8 +1,8 @@
-import { ApiResponse } from 'api/models/ApiResponse';
-import { OrderModel } from 'api/models/OrderModel';
+import type { ApiResponse } from 'api/models/ApiResponse';
+import type { OrderResponse } from 'api/models/OrderResponse';
 import { instance } from './axios';
 
-export const getOrders = async (): Promise<ApiResponse<OrderModel[]>> => {
+export const getOrders = async (): Promise<ApiResponse<OrderResponse[]>> => {
   const response = await instance.get('/orders');
   return response.data;
 };
