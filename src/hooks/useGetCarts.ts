@@ -1,5 +1,5 @@
+import { getCarts } from '@api';
 import { useQuery } from '@tanstack/react-query';
-import { getCarts } from '../api/axios/cartApi';
 
 export const CARTS_QUERY_KEY = 'carts';
 

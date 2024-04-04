@@ -1,5 +1,5 @@
+import { getProducts } from '@api';
 import { useQuery } from '@tanstack/react-query';
-import { getProducts } from '../api/axios/productApi';
 
 const PRODUCTS_QUERY_KEY = 'products';
 
