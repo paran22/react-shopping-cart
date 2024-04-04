@@ -1,5 +1,5 @@
 import { useGetProducts } from '@hooks';
-import Products from './components/Products';
+import Products from './components/ProductList';
 
 export default function ProductsPage() {
   const { data: products } = useGetProducts();

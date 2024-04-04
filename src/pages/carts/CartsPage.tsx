@@ -1,5 +1,5 @@
 import { PageTitle } from '@components/layout';
-import Carts from './components/Carts';
+import CartList from './components/CartList';
 import CartAllSelector from './components/CartsAllSelector';
 import CartsSummary from './components/CartsSummary';
 import useCarts from './hooks/useCarts';
@@ -24,7 +24,7 @@ export default function CartsPage() {
               isSelectedAll={selectedAll}
               selectAll={selectAll}
             />
-            <Carts
+            <CartList
               data={carts}
               onSelect={handleSelect}
               onQuantityChange={handleQuantityChange}

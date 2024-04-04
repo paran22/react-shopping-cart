@@ -1,13 +1,13 @@
 import type { ProductResponse } from '@api';
 import { Cart } from '@assets';
 
-interface ProductProps {
+interface ProductItemProps {
   data: ProductResponse;
 }
 
-export default function Product({
+export default function ProductItem({
   data: { imageUrl, name, price },
-}: ProductProps) {
+}: ProductItemProps) {
   const displayedPrice = `${price.toLocaleString()}원`;
   return (
     <div className="product-item">

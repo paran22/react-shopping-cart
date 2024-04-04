@@ -3,17 +3,17 @@ import CartItem from './CartItem';
 import CartsHeader from './CartsHeader';
 import { useDeleteCart } from '@hooks';
 
-interface CartProps {
+interface CartListProps {
   data: Cart[];
   onSelect: (id: number) => void;
   onQuantityChange: (id: number, quantity: number) => void;
 }
 
-export default function Carts({
+export default function CartList({
   data: carts,
   onSelect,
   onQuantityChange,
-}: CartProps) {
+}: CartListProps) {
   const selectedItemQuantity = carts.filter((cart) => cart.selected).length;
   const { mutate: deleteCart } = useDeleteCart();
 
