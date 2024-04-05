@@ -32,16 +32,15 @@ export default function CartList({
   return (
     <>
       <CartsHeader selectedItemQuantity={selectedItemQuantity} />
-      {carts &&
-        carts.map((cart) => (
-          <CartItem
-            key={cart.id}
-            data={cart}
-            onSelect={handleSelect}
-            onDelete={handleDelete}
-            onQuantityChange={handleQuantityChange}
-          />
-        ))}
+      {carts.map((cart) => (
+        <CartItem
+          key={cart.id}
+          data={cart}
+          onSelect={handleSelect}
+          onDelete={handleDelete}
+          onQuantityChange={handleQuantityChange}
+        />
+      ))}
     </>
   );
 }

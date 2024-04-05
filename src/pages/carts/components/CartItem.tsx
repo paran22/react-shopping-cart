@@ -1,6 +1,6 @@
 import { Trash } from '@assets';
 import { Button, CheckBox } from '@components/ui';
-import { Cart } from '@types';
+import type { Cart } from '@types';
 import QuantitySelector from './QuantitySelector';
 
 interface CartItemProps {

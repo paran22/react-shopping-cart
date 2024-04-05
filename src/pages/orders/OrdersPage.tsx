@@ -8,7 +8,6 @@ export default function OrdersPage() {
   return (
     <section className="order-section">
       <PageTitle title="주문목록" />
-
       {match(result)
         .with({ status: 'pending' }, () => <LoadingView />)
         .with({ status: 'success', data: P.select() }, (data) =>

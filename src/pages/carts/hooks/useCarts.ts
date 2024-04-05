@@ -1,8 +1,9 @@
 import { useCallback, useMemo } from 'react';
 import useCartsState from './useCartsState';
+import type { CartResponse } from '@api';
 
-export default function useCarts() {
-  const [carts, setCarts] = useCartsState();
+export default function useCarts(initialCarts: CartResponse[]) {
+  const [carts, setCarts] = useCartsState(initialCarts);
   const selectedAll = useMemo(
     () => carts.every((cart) => cart.selected),
     [carts],

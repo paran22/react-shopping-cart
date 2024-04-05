@@ -1,31 +1,29 @@
-import { useGetCarts } from '@hooks';
+import type { CartResponse } from '@api';
 import type { Cart } from '@types';
 import { useEffect, useState } from 'react';
 
-export default function useCartsState(): [
-  Cart[],
-  React.Dispatch<React.SetStateAction<Cart[]>>,
-] {
-  const { data } = useGetCarts();
+export default function useCartsState(
+  initialCarts: CartResponse[],
+): [Cart[], React.Dispatch<React.SetStateAction<Cart[]>>] {
   const [carts, setCarts] = useState<Cart[]>([]);
   useEffect(() => {
-    if (!data) return;
+    if (!initialCarts) return;
     if (carts.length === 0) {
-      const initialCarts = (data ?? []).map((cart) => ({
+      const carts = (initialCarts ?? []).map((cart) => ({
         ...cart,
         selected: true,
       }));
-      setCarts(initialCarts);
+      setCarts(carts);
       return;
     }
     setCarts((prev) =>
-      data.map((cart) => ({
+      initialCarts.map((cart) => ({
         ...cart,
         selected: prev.find((prevCart) => prevCart.id === cart.id)
           ? prev.find((prevCart) => prevCart.id === cart.id)?.selected ?? true
           : false,
       })),
     );
-  }, [data, carts.length]);
+  }, [initialCarts, carts.length]);
   return [carts, setCarts];
 }
