@@ -41,6 +41,7 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:01940a95b60f8a6b8676fddbb971e4db15c357c7c184292797baf3fe9a116ecdea998341915887b3137ca427b3996bd3611f1b718320be0d1939fd5edce586a5#npm:18.2.0"],\
           ["react-router-dom", "virtual:01940a95b60f8a6b8676fddbb971e4db15c357c7c184292797baf3fe9a116ecdea998341915887b3137ca427b3996bd3611f1b718320be0d1939fd5edce586a5#npm:6.22.3"],\
+          ["react-spinners", "virtual:01940a95b60f8a6b8676fddbb971e4db15c357c7c184292797baf3fe9a116ecdea998341915887b3137ca427b3996bd3611f1b718320be0d1939fd5edce586a5#npm:0.13.8"],\
           ["ts-pattern", "npm:5.1.0"],\
           ["typescript", "patch:typescript@npm%3A5.4.2#optional!builtin<compat/typescript>::version=5.4.2&hash=5adc0c"],\
           ["vite", "virtual:01940a95b60f8a6b8676fddbb971e4db15c357c7c184292797baf3fe9a116ecdea998341915887b3137ca427b3996bd3611f1b718320be0d1939fd5edce586a5#npm:5.2.2"],\
@@ -5999,12 +6000,39 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:01940a95b60f8a6b8676fddbb971e4db15c357c7c184292797baf3fe9a116ecdea998341915887b3137ca427b3996bd3611f1b718320be0d1939fd5edce586a5#npm:18.2.0"],\
           ["react-router-dom", "virtual:01940a95b60f8a6b8676fddbb971e4db15c357c7c184292797baf3fe9a116ecdea998341915887b3137ca427b3996bd3611f1b718320be0d1939fd5edce586a5#npm:6.22.3"],\
+          ["react-spinners", "virtual:01940a95b60f8a6b8676fddbb971e4db15c357c7c184292797baf3fe9a116ecdea998341915887b3137ca427b3996bd3611f1b718320be0d1939fd5edce586a5#npm:0.13.8"],\
           ["ts-pattern", "npm:5.1.0"],\
           ["typescript", "patch:typescript@npm%3A5.4.2#optional!builtin<compat/typescript>::version=5.4.2&hash=5adc0c"],\
           ["vite", "virtual:01940a95b60f8a6b8676fddbb971e4db15c357c7c184292797baf3fe9a116ecdea998341915887b3137ca427b3996bd3611f1b718320be0d1939fd5edce586a5#npm:5.2.2"],\
           ["vite-plugin-svgr", "virtual:01940a95b60f8a6b8676fddbb971e4db15c357c7c184292797baf3fe9a116ecdea998341915887b3137ca427b3996bd3611f1b718320be0d1939fd5edce586a5#npm:4.2.0"]\
         ],\
         "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["react-spinners", [\
+      ["npm:0.13.8", {\
+        "packageLocation": "../.yarn/berry/cache/react-spinners-npm-0.13.8-bf54f5b324-10c0.zip/node_modules/react-spinners/",\
+        "packageDependencies": [\
+          ["react-spinners", "npm:0.13.8"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:01940a95b60f8a6b8676fddbb971e4db15c357c7c184292797baf3fe9a116ecdea998341915887b3137ca427b3996bd3611f1b718320be0d1939fd5edce586a5#npm:0.13.8", {\
+        "packageLocation": "./.yarn/__virtual__/react-spinners-virtual-bdd5c1b233/2/.yarn/berry/cache/react-spinners-npm-0.13.8-bf54f5b324-10c0.zip/node_modules/react-spinners/",\
+        "packageDependencies": [\
+          ["react-spinners", "virtual:01940a95b60f8a6b8676fddbb971e4db15c357c7c184292797baf3fe9a116ecdea998341915887b3137ca427b3996bd3611f1b718320be0d1939fd5edce586a5#npm:0.13.8"],\
+          ["@types/react", "npm:18.2.67"],\
+          ["@types/react-dom", "npm:18.2.22"],\
+          ["react", "npm:18.2.0"],\
+          ["react-dom", "virtual:01940a95b60f8a6b8676fddbb971e4db15c357c7c184292797baf3fe9a116ecdea998341915887b3137ca427b3996bd3611f1b718320be0d1939fd5edce586a5#npm:18.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react-dom",\
+          "@types/react",\
+          "react-dom",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["regenerate", [\
