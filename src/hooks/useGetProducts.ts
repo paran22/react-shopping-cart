@@ -9,6 +9,5 @@ export default function useGetProducts() {
     queryFn: getProducts,
     select: (response) => response.data,
     refetchOnMount: false,
-    staleTime: 1000 * 60 * 4,
   });
 }
