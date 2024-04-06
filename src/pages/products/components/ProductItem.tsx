@@ -1,5 +1,6 @@
 import type { ProductResponse } from '@api';
 import { Cart } from '@assets';
+import { formatPrice } from '@utils';
 
 interface ProductItemProps {
   data: ProductResponse;
@@ -8,7 +9,7 @@ interface ProductItemProps {
 export default function ProductItem({
   data: { imageUrl, name, price },
 }: ProductItemProps) {
-  const displayedPrice = `${price.toLocaleString()}원`;
+  const displayedPrice = formatPrice(price);
   return (
     <div className="product-item">
       <img src={imageUrl} alt={name} />

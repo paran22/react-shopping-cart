@@ -2,6 +2,7 @@ import { Trash } from '@assets';
 import { Button, CheckBox } from '@components/ui';
 import type { Cart } from '@types';
 import QuantitySelector from './QuantitySelector';
+import { formatPrice } from '@utils';
 
 interface CartItemProps {
   data: Cart;
@@ -24,7 +25,7 @@ export default function CartItem({
   };
   const { imageUrl, name } = cart.product;
 
-  const displayedPrice = (cart.quantity * cart.product.price).toLocaleString();
+  const displayedPrice = formatPrice(cart.quantity * cart.product.price);
   const handlePlus = () => {
     onQuantityChange(cart.id, cart.quantity + 1);
   };
@@ -53,7 +54,7 @@ export default function CartItem({
           min={1}
           max={20}
         />
-        <span className="cart-price">{`${displayedPrice}원`}</span>
+        <span className="cart-price">{displayedPrice}</span>
       </div>
     </div>
   );

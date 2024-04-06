@@ -1,5 +1,6 @@
 import type { OrderProductResponse } from '@api';
 import { Button } from '@components/ui';
+import { formatPrice } from '@utils';
 
 interface OrderProductItemProps {
   data: OrderProductResponse;
@@ -9,7 +10,7 @@ export default function OrderProductItem({
   data: orderProduct,
 }: OrderProductItemProps) {
   const { name, price, imageUrl, quantity } = orderProduct;
-  const displayedPrice = (price * quantity).toLocaleString();
+  const displayedPrice = formatPrice(price * quantity);
   const handleClick = (id: number) => () => {
     //TODO: 장바구나 추가하기
   };
@@ -20,7 +21,7 @@ export default function OrderProductItem({
         <div className="flex-col gap-15">
           <span className="order-name">{name}</span>
           <span className="order-info">
-            {`${displayedPrice}원 / 수량: ${quantity}`}
+            {`${displayedPrice} / 수량: ${quantity}`}
           </span>
         </div>
       </div>
