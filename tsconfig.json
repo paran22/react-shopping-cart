@@ -26,7 +26,8 @@
       "@components/ui": ["./components/ui/index.ts"],
       "@assets": ["./assets/index.ts"],
       "@types": ["./types/index.ts"],
-      "@hooks": ["./hooks/index.ts"]
+      "@hooks": ["./hooks/index.ts"],
+      "@utils": ["./utils/index.ts"]
     }
   },
   "include": ["src", "svg.d.ts"],
