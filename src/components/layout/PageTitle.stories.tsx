@@ -5,6 +5,7 @@ import PageTitle from './PageTitle';
 export default {
   title: 'Layout/PageTitle',
   component: PageTitle,
+  tags: ['autodocs'],
 } as Meta<typeof PageTitle>;
 
 const Template: StoryFn<typeof PageTitle> = (args) => <PageTitle {...args} />;
