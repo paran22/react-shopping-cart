@@ -28,6 +28,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@biomejs/biome", "npm:1.6.3"],\
           ["@chromatic-com/storybook", "npm:1.3.1"],\
+          ["@storybook/addon-actions", "npm:8.0.6"],\
           ["@storybook/addon-essentials", "npm:8.0.6"],\
           ["@storybook/addon-interactions", "npm:8.0.6"],\
           ["@storybook/addon-links", "virtual:01940a95b60f8a6b8676fddbb971e4db15c357c7c184292797baf3fe9a116ecdea998341915887b3137ca427b3996bd3611f1b718320be0d1939fd5edce586a5#npm:8.0.6"],\
@@ -12904,6 +12905,7 @@ const RAW_RUNTIME_STATE =
           ["react-shopping-cart", "workspace:."],\
           ["@biomejs/biome", "npm:1.6.3"],\
           ["@chromatic-com/storybook", "npm:1.3.1"],\
+          ["@storybook/addon-actions", "npm:8.0.6"],\
           ["@storybook/addon-essentials", "npm:8.0.6"],\
           ["@storybook/addon-interactions", "npm:8.0.6"],\
           ["@storybook/addon-links", "virtual:01940a95b60f8a6b8676fddbb971e4db15c357c7c184292797baf3fe9a116ecdea998341915887b3137ca427b3996bd3611f1b718320be0d1939fd5edce586a5#npm:8.0.6"],\
