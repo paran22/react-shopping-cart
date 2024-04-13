@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "svgr": "npx @svgr/cli -d src/assets/svgs --ignore-existing --typescript --no-dimensions public/assets/svgs",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_b22bbbcd78e7997"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.28.9",
@@ -41,6 +42,7 @@
     "@types/react": "^18.2.67",
     "@types/react-dom": "^18.2.22",
     "@vitejs/plugin-react": "^4.2.1",
+    "chromatic": "^11.3.0",
     "msw": "^2.2.9",
     "storybook": "^8.0.6",
     "storybook-addon-remix-react-router": "^3.0.0",
@@ -50,8 +52,6 @@
   },
   "packageManager": "yarn@4.1.1",
   "msw": {
-    "workerDirectory": [
-      "public"
-    ]
+    "workerDirectory": ["public"]
   }
 }

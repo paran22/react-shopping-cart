@@ -8556,6 +8556,7 @@ __metadata:
     "@types/react-dom": "npm:^18.2.22"
     "@vitejs/plugin-react": "npm:^4.2.1"
     axios: "npm:^1.6.8"
+    chromatic: "npm:^11.3.0"
     clsx: "npm:^2.1.0"
     msw: "npm:^2.2.9"
     react: "npm:^18.2.0"

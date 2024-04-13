@@ -46,6 +46,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "npm:18.2.22"],\
           ["@vitejs/plugin-react", "virtual:01940a95b60f8a6b8676fddbb971e4db15c357c7c184292797baf3fe9a116ecdea998341915887b3137ca427b3996bd3611f1b718320be0d1939fd5edce586a5#npm:4.2.1"],\
           ["axios", "npm:1.6.8"],\
+          ["chromatic", "virtual:8e6ffde6c06618d0ea5ce30319433ea9c49c20fef0ace13447c72d71bebb6f2cd3c6df14098a4d450dbfe20500140cd0ba3631944eb4eac504840384982e1621#npm:11.3.0"],\
           ["clsx", "npm:2.1.0"],\
           ["msw", "virtual:01940a95b60f8a6b8676fddbb971e4db15c357c7c184292797baf3fe9a116ecdea998341915887b3137ca427b3996bd3611f1b718320be0d1939fd5edce586a5#npm:2.2.9"],\
           ["react", "npm:18.2.0"],\
@@ -12923,6 +12924,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "npm:18.2.22"],\
           ["@vitejs/plugin-react", "virtual:01940a95b60f8a6b8676fddbb971e4db15c357c7c184292797baf3fe9a116ecdea998341915887b3137ca427b3996bd3611f1b718320be0d1939fd5edce586a5#npm:4.2.1"],\
           ["axios", "npm:1.6.8"],\
+          ["chromatic", "virtual:8e6ffde6c06618d0ea5ce30319433ea9c49c20fef0ace13447c72d71bebb6f2cd3c6df14098a4d450dbfe20500140cd0ba3631944eb4eac504840384982e1621#npm:11.3.0"],\
           ["clsx", "npm:2.1.0"],\
           ["msw", "virtual:01940a95b60f8a6b8676fddbb971e4db15c357c7c184292797baf3fe9a116ecdea998341915887b3137ca427b3996bd3611f1b718320be0d1939fd5edce586a5#npm:2.2.9"],\
           ["react", "npm:18.2.0"],\
