@@ -2226,9 +2226,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mswjs/interceptors@npm:^0.25.16":
-  version: 0.25.16
-  resolution: "@mswjs/interceptors@npm:0.25.16"
+"@mswjs/interceptors@npm:^0.26.14":
+  version: 0.26.15
+  resolution: "@mswjs/interceptors@npm:0.26.15"
   dependencies:
     "@open-draft/deferred-promise": "npm:^2.2.0"
     "@open-draft/logger": "npm:^0.3.0"
@@ -2236,7 +2236,7 @@ __metadata:
     is-node-process: "npm:^1.2.0"
     outvariant: "npm:^1.2.1"
     strict-event-emitter: "npm:^0.5.1"
-  checksum: 10c0/396a22d08537f927e6305589521be242d5940d07672b98539bf818e6c65766137f0fb8cf322cf44dafa429fa796488efa565ce7c577e6e62b1482f6ea3e78ab7
+  checksum: 10c0/378c4b14adf020aa7b23816aae364fcea00becfaba30665e9a35d4726c581df0762342625cc2b6e3e84b6a1e87b3c263f96946a60fe16b78db7c19e698e4a4f3
   languageName: node
   linkType: hard
 
@@ -6769,7 +6769,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-node-process@npm:^1.2.0":
+"is-node-process@npm:^1.0.1, is-node-process@npm:^1.2.0":
   version: 1.2.0
   resolution: "is-node-process@npm:1.2.0"
   checksum: 10c0/5b24fda6776d00e42431d7bcd86bce81cb0b6cabeb944142fe7b077a54ada2e155066ad06dbe790abdb397884bdc3151e04a9707b8cd185099efbc79780573ed
@@ -7586,15 +7586,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"msw@npm:^2.2.9":
-  version: 2.2.9
-  resolution: "msw@npm:2.2.9"
+"msw-storybook-addon@npm:2.0.0-beta.1":
+  version: 2.0.0-beta.1
+  resolution: "msw-storybook-addon@npm:2.0.0-beta.1"
+  dependencies:
+    is-node-process: "npm:^1.0.1"
+  peerDependencies:
+    msw: ^2.0.0
+  checksum: 10c0/a23dfc76ae79f73edc381365d87c6bd2eb43ce5cf3b9a1022ce55d3727f9bd6442a3c5b7984fc9127fdfefe372a3c3410865ae5399a967f0aeaa5918a9104f21
+  languageName: node
+  linkType: hard
+
+"msw@npm:^2.2.13":
+  version: 2.2.13
+  resolution: "msw@npm:2.2.13"
   dependencies:
     "@bundled-es-modules/cookie": "npm:^2.0.0"
     "@bundled-es-modules/statuses": "npm:^1.0.1"
     "@inquirer/confirm": "npm:^3.0.0"
     "@mswjs/cookies": "npm:^1.1.0"
-    "@mswjs/interceptors": "npm:^0.25.16"
+    "@mswjs/interceptors": "npm:^0.26.14"
     "@open-draft/until": "npm:^2.1.0"
     "@types/cookie": "npm:^0.6.0"
     "@types/statuses": "npm:^2.0.4"
@@ -7614,7 +7625,7 @@ __metadata:
       optional: true
   bin:
     msw: cli/index.js
-  checksum: 10c0/e9b88d6e4e47cab84c4653e19dc13bde84f57d148aa33b9a2094719c7f2c277ccdab7b34d59e3ca0f1fa82fa2f0df1142aeaa50eb2d9ad5704ccc20c5c8efd13
+  checksum: 10c0/3e1cf1f4122410b5e4685101bf0e131c508a6fb0f889cf475c0d361263e4feb3aed03fbf31ed5e39fff04562bbe92cfe09b49e72270acadd5842d68ce2080ff2
   languageName: node
   linkType: hard
 
@@ -8558,7 +8569,8 @@ __metadata:
     axios: "npm:^1.6.8"
     chromatic: "npm:^11.3.0"
     clsx: "npm:^2.1.0"
-    msw: "npm:^2.2.9"
+    msw: "npm:^2.2.13"
+    msw-storybook-addon: "npm:2.0.0-beta.1"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     react-router-dom: "npm:^6.22.3"

@@ -12,7 +12,6 @@ function getAbsolutePath(value: string): any {
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
   addons: [
-    getAbsolutePath('@storybook/addon-onboarding'),
     getAbsolutePath('@storybook/addon-links'),
     getAbsolutePath('@storybook/addon-essentials'),
     getAbsolutePath('@chromatic-com/storybook'),
@@ -20,6 +19,7 @@ const config: StorybookConfig = {
     getAbsolutePath('@storybook/addon-interactions'),
     getAbsolutePath('@storybook/test'),
     'storybook-addon-remix-react-router',
+    'msw-storybook-addon',
   ],
   framework: {
     name: getAbsolutePath('@storybook/react-vite'),
