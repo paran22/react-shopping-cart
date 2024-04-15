@@ -1,9 +1,7 @@
 import type { Preview } from '@storybook/react';
-import '../src/styles/index.css';
-import { router } from '../src/router';
-import { withRouter } from 'storybook-addon-remix-react-router';
 import { initialize, mswDecorator, mswLoader } from 'msw-storybook-addon';
-import { handlers } from '../src/api/mocks/handlers';
+import { withRouter } from 'storybook-addon-remix-react-router';
+import '../src/styles/index.css';
 
 initialize();
 
